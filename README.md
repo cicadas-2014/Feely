@@ -3,6 +3,7 @@ Feely
 
 How are you feeling? 
 
+********************
 
 People are always around us. But how are they feeling? 
 
