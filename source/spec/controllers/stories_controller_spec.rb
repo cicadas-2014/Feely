@@ -1,0 +1,3 @@
+describe StoriesController do
+
+end
