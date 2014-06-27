@@ -5,11 +5,14 @@ describe "Colors" do
   describe "User can view colors"  do
     it "by visiting the homepage" do
       visit root_path
-      expect(page).to have_content within(:css, "#purple")
+      expect(page).to have_css("#purple")
+      expect(page).to have_css("#orange")
+      expect(page).to have_css("#black")
     end
 
-    it "displays all colors in database" do
-      pending
+    it "asks the user to choose a color" do
+      visit root_path
+      expect(page).to have_content("Choose a Color")
     end
   end
 
