@@ -1,3 +1,4 @@
+
 FactoryGirl.define do
   factory :color do
     name { Faker::Lorem.word }
