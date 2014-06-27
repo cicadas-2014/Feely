@@ -1,11 +1,11 @@
 require 'spec_helper'
 describe "Colors" do
-  let!(:color) { Color.new(name: 'white', hexcode: 'FFFFFF') }
-
+  let!(:purple) { create :purple }
+  let!(:blue) { create :blue }
   describe "User can view colors"  do
     it "by visiting the homepage" do
       visit root_path
-      expect(page).to have_content within(:css, "#white")
+      expect(page).to have_content within(:css, "#purple")
     end
 
     it "displays all colors in database" do
