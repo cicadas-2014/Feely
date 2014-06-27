@@ -1,9 +1,13 @@
-<h1> Feely </h1>
+<div class="container"> 
+	<h1> Feely </h1>
 
-<h2> Choose a Color </h2>
+	<h2> Choose a Color </h2>
 
 <div class="colors-container">
-  <% @colors.each do |color| %>
-    <div class="color-selection" id="<%=color.name%>"><%= button_to color.name, new_color_stories_path(color), :id => color.name %></div>
-  <%end%>
+	<% @colors.each do |color| %>
+	<a href="/colors/<%= color.id %>/stories/new">
+	<div class="color-selection" id="<%=color.name%>"></div></a>
+	<%end%>
+</div>
+<%= image_tag("background.jpg", id: 'background') %>
 </div>

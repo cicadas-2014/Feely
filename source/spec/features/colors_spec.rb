@@ -21,7 +21,7 @@ describe "Colors" do
   describe "User can click on a color element that" do
     it "redirects to the story page" do
       visit root_path
-      pending
+      click_link('blue')
       expect(response.status).to eq 200
     end
   end
