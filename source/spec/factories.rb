@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :color do
-    name { Faker::Lorem.word }
+    name { Faker::Commerce.color }
     hex_code { "%06x" % (rand * 0xffffff) }
   end
 
