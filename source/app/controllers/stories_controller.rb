@@ -15,6 +15,9 @@ class StoriesController < ApplicationController
     end
   end
 
+  def new
+  end
+
   def show
     @color = Color.find(params[:color_id])
     @stories = @color.stories
