@@ -23,29 +23,11 @@ ActiveRecord::Schema.define(version: 20140626212646) do
     t.datetime "updated_at"
   end
 
-  create_table "posts", force: true do |t|
-    t.string   "slug"
-    t.string   "title"
-    t.text     "content"
-    t.boolean  "is_published", default: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "stories", force: true do |t|
     t.string   "anecdote"
     t.integer  "color_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "tasks", force: true do |t|
-    t.string  "body"
-    t.integer "todo_id"
-  end
-
-  create_table "todos", force: true do |t|
-    t.string "title"
   end
 
 end
