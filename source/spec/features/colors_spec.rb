@@ -1,7 +1,7 @@
 require 'spec_helper'
 describe "Colors" do
-  let!(:purple) { create :purple }
-  let!(:blue) { create :blue }
+  let(:color) { create :purple }
+  let(:blue) { create :blue }
   describe "User can view colors"  do
     it "by visiting the homepage" do
       visit root_path
@@ -9,6 +9,7 @@ describe "Colors" do
     end
 
     it "displays all colors in database" do
+      pending
     end
   end
 
