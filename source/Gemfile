@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
+# Use sqlite3 as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -37,19 +38,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-group :assets do
-  gem 'uglifier', '>= 1.0.3'
-end
-
 group :development, :test do
-  gem 'rspec-rails'
-end
-
-group :test do
-  gem 'shoulda-matchers'
-  gem 'factory_girl_rails'
-  gem 'faker'
-  gem 'capybara'
-  gem 'selenium-webdriver'
-  gem 'database_cleaner'
+  gem 'rspec-rails', '~> 2.14.1'
+  gem 'capybara', '~> 2.2.1'
+  gem 'database_cleaner', '~> 1.2.0'
 end
