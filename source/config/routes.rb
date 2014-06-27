@@ -1,3 +1,7 @@
 Feely::Application.routes.draw do
-  resources :colors, :stories 
+
+  resources :colors do
+    resource :stories
+  end
+
 end
