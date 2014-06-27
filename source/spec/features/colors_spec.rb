@@ -1,7 +1,8 @@
 require 'spec_helper'
 describe "Colors" do
   before(:each) do
-    @colors << create :purple
+    @colors << Color.new( name: 'purple',
+                          hex_code: '#551A8B')
   end
   # let!(:purple) { create :purple }
   # let(:blue) { create :blue }
