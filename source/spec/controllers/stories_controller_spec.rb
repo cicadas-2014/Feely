@@ -19,20 +19,20 @@ describe StoriesController do
     end
   end
 
-  context "get#show" do
-    it "is successful" do
-      get :show, :color_id => touchy.color.id, :id => touchy.id
-      expect(response).to be_success
-    end
+  # context "get#show" do
+  #   it "is successful" do
+  #     get :show, :color_id => touchy.color.id, :id => touchy.id
+  #     expect(response).to be_success
+  #   end
 
-    it "assigns @color to color" do
-      get :show, :color_id => touchy.color.id, :id => touchy.id
-      expect(assigns(:color)).to eq touchy.color
-    end
+  #   it "assigns @color to color" do
+  #     get :show, :color_id => touchy.color.id, :id => touchy.id
+  #     expect(assigns(:color)).to eq touchy.color
+  #   end
 
-    it "assigns @story to story" do
-      get :show, :color_id => touchy.color.id, :id => touchy.id
-      expect(assigns(:stories)).to eq [touchy]
-    end
-  end
+  #   it "assigns @story to story" do
+  #     get :show, :color_id => touchy.color.id, :id => touchy.id
+  #     expect(assigns(:stories)).to eq [touchy]
+  #   end
+  # end
 end

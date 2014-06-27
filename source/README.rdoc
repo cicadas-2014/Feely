@@ -34,10 +34,10 @@ Please feel free to use a different markup language if you do not plan to run
   - I can visit a story page
   - that has the color I picked from the previous page
   - when I fill in the form
-  - and clicking submit takes me to the feed
+  - and clicking submit takes me to that color's page
 - Scenario: with invalid params
   - As a guest user
   - I can visit a story page
-  - that haas the color I picked from the previous page
+  - that has the color I picked from the previous page
   - when I leave the form blank
   - I can see the error: "Body can't be blank"

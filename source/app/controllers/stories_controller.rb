@@ -1,6 +1,10 @@
 class StoriesController < ApplicationController
   before_action :load_color
 
+  def new
+    @story = Story.new
+  end
+
   def create
     p params
     @story = @color.stories.build params[:story]
@@ -13,6 +17,10 @@ class StoriesController < ApplicationController
 
   def show
     @stories = @color.stories
+  end
+
+  def story
+
   end
 
   private

@@ -1,0 +1,13 @@
+<div class="story-container">
+  <h1>this is the new page</h1>
+  <h1><%= @color.name %></h1>
+  <div class="story-form">
+    <div class="errors"></div>
+    <%= form_for [@story, @color], url: color_stories_path(@color), html: { method: "create" } do |f| %>
+    <%= p color_stories_path %>
+    <%= f.label :anecdote %>
+    <%= f.text_field :anecdote %>
+    <%= f.submit %>
+    <% end %>
+  </div>
+</div>
