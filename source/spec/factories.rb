@@ -8,4 +8,14 @@ FactoryGirl.define do
     anecdote { Faker::Lorem.sentence }
     color
   end
+
+  factory :purple do
+    name { 'purple' }
+    hex_code { '#551A8B' }
+  end
+
+  factory :blue do
+    name { 'blue' }
+    hex_code { '#38B0DE' }
+  end
 end

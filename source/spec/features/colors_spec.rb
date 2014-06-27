@@ -1,6 +1,6 @@
 require 'spec_helper'
 describe "Colors" do
-  let(:color) { create :purple }
+  let(:purple) { create :purple }
   let(:blue) { create :blue }
   describe "User can view colors"  do
     it "by visiting the homepage" do
