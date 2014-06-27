@@ -3,7 +3,7 @@ Feely::Application.routes.draw do
   get '/stories/all' => 'stories#index'
 
   resources :colors do
-    resources :stories
+    resource :stories
   end
 
   root :to => 'colors#index'

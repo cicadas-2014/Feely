@@ -1,8 +1,8 @@
 require 'spec_helper'
-require 'pry'
+
 describe StoriesController do
-  let!(:touchy) { create :story }
   let!(:color) { create :color }
+  let!(:touchy) { Story.create( anecdote: Faker::Lorem.sentence, color_id: color.id) }
 
   context 'stories#index' do
     it "renders the index view" do
@@ -35,17 +35,17 @@ describe StoriesController do
 
   context "stories#show" do
     it "is successful" do
-      get :show, :color_id => touchy.color.id, :id => touchy.id
+      get :show, :color_id => touchy.color_id, :id => touchy.id
       expect(response).to be_success
     end
 
     it "assigns @color to color" do
-      get :show, :color_id => touchy.color.id, :id => touchy.id
+      get :show, :color_id => touchy.color_id, :id => touchy.id
       expect(assigns(:color)).to eq touchy.color
     end
 
     it "assigns @story to story" do
-      get :show, :color_id => touchy.color.id, :id => touchy.id
+      get :show, :color_id => touchy.color_id, :id => touchy.id
       expect(assigns(:stories)).to eq [touchy]
     end
   end

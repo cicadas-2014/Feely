@@ -1,4 +1,5 @@
 require 'pry'
+
 class StoriesController < ApplicationController
   # before_action :load_color
 
@@ -17,6 +18,7 @@ class StoriesController < ApplicationController
   end
 
   def show
+    @color = Color.find(params[:color_id])
     @stories = @color.stories
   end
 
