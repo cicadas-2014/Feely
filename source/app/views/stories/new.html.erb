@@ -3,8 +3,7 @@
   <h1><%= @color.name %></h1>
   <div class="story-form">
     <div class="errors"></div>
-    <%= form_for [@story, @color], url: color_stories_path(@color), html: { method: "create" } do |f| %>
-    <%= p color_stories_path %>
+    <%= form_for @story, url: color_stories_path(@story), html: { method: "create" } do |f| %>
     <%= f.label :anecdote %>
     <%= f.text_field :anecdote %>
     <%= f.submit %>

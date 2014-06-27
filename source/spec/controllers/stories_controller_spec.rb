@@ -6,8 +6,11 @@ describe StoriesController do
   context "get#create" do
     it "creates a story with valid params" do
       expect {
-        post :create, :color_id => touchy.color.id, :id => touchy.id
-        expect(response).to be_success
+        # puts touchy.color.inspect
+        # puts touchy.inspect
+        post :create, :color_id => touchy.color.id, :id => touchy.id, :story => {anecdote: touchy.anecdote}
+        # puts response.status.inspect
+        expect(response).to be_redirect
       }.to change { Story.count }.by(1)
     end
 

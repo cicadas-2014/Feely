@@ -1,3 +1,4 @@
 class Story < ActiveRecord::Base
-  belongs_to :color 
+  validates :anecdote, presence: true, uniqueness: true
+  belongs_to :color
 end

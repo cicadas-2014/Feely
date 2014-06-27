@@ -7,9 +7,14 @@ class StoriesController < ApplicationController
 
   def create
     p params
-    @story = @color.stories.build params[:story]
+    p params[:story]
+    p "*" * 40
+    p build_params
+    p "*" * 40
+    @story = @color.stories.build build_params
     if @story.save
-      redirect_to color_path(@story.color.id)
+      puts "I made it in the story.save block"
+      redirect_to color_path(@story.color)
     else
       render :partial => 'shared/errors', :locals => { :object => @story }, :status => :unprocessable_entity
     end
@@ -19,13 +24,13 @@ class StoriesController < ApplicationController
     @stories = @color.stories
   end
 
-  def story
-
-  end
-
   private
   def load_color
     @color = Color.find params[:color_id]
+  end
+
+  def build_params
+    params.require(:story).permit(:anecdote)
   end
 
 end
