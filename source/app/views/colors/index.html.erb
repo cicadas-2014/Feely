@@ -6,7 +6,7 @@
 <div class="colors-container">
 	<% @colors.each do |color| %>
 	<a href="/colors/<%= color.id %>/stories/new">
-	<div class="color-selection" id="<%=color.name%>"></div></a>
+	<div class="color-selection" id="<%=color.name%>" ></div></a>
 	<%end%>
 </div>
 <%= image_tag("background.jpg", id: 'background') %>
