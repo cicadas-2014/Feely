@@ -1,3 +1,4 @@
+require 'pry'
 class StoriesController < ApplicationController
   # before_action :load_color
 
@@ -6,10 +7,10 @@ class StoriesController < ApplicationController
   end
 
   def create
-    p params
-    @story = @color.stories.build params[:story]
+    @story = Story.new( anecdote: params[:anecdote],
+                        color_id: params[:color_id] )
     if @story.save
-      redirect_to color_path(@story.color.id)
+      redirect_to color_path(@story.color_id)
     else
       render :partial => 'shared/errors', :locals => { :object => @story }, :status => :unprocessable_entity
     end
