@@ -5,12 +5,10 @@ describe "Colors" do
     Color.create( name: 'purple',
                   hex_code: '#551A8B')
   end
-  # let!(:purple) { create :purple }
-  # let(:blue) { create :blue }
+
   describe "User can view colors"  do
     it "by visiting the homepage" do
       visit root_path
-      binding.pry
       expect(page).to have_css(".color-selection")
     end
 
