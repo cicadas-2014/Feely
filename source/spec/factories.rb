@@ -7,7 +7,7 @@ FactoryGirl.define do
 
   factory :story do
     anecdote { Faker::Lorem.sentence }
-    color
+    color_id { 1 }
   end
 
   factory :purple do

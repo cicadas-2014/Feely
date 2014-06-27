@@ -1,5 +1,9 @@
 class StoriesController < ApplicationController
-  before_action :load_color
+  # before_action :load_color
+
+  def index
+    @stories = Story.all
+  end
 
   def create
     p params

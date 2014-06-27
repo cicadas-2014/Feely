@@ -2,6 +2,20 @@ require 'spec_helper'
 
 describe StoriesController do
   let!(:touchy) { create :story }
+  let!(:color) { create :color }
+
+  context 'get#index' do
+    it "renders the index view" do
+      get :index
+      expect(response).to render_template(:index)
+    end
+
+    it "grabs all the stories and displays them" do
+      pending
+      # get :index
+      # expect()
+    end
+  end
 
   context "get#create" do
     it "creates a story with valid params" do
