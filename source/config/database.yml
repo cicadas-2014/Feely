@@ -51,6 +51,7 @@ test:
   pool: 5
   username:
   password:
+  timeout: 500000
 
 production:
   adapter: postgresql
