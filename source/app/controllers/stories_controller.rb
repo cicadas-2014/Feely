@@ -1,5 +1,3 @@
-require 'pry'
-
 class StoriesController < ApplicationController
   # before_action :load_color
 
