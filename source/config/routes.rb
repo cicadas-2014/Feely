@@ -1,3 +1,4 @@
 Feely::Application.routes.draw do
-  resources :colors, :stories 
+  root :to => 'color#index'
+  resources :colors, :stories
 end
