@@ -6,16 +6,17 @@ class StoriesController < ApplicationController
   end
 
   def create
-    p params
-    @story = @color.stories.build params[:story]
+    @story = Story.new( anecdote: params[:anecdote],
+                        color_id: params[:color_id] )
     if @story.save
-      redirect_to color_path(@story.color.id)
+      redirect_to color_path(@story.color_id)
     else
       render :partial => 'shared/errors', :locals => { :object => @story }, :status => :unprocessable_entity
     end
   end
 
   def show
+    @color = Color.find(params[:color_id])
     @stories = @color.stories
   end
 

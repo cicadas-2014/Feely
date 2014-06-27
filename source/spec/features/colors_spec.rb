@@ -1,5 +1,5 @@
-require 'pry'
 require 'spec_helper'
+
 describe "Colors" do
   before(:each) do
     Color.create( name: 'purple',
