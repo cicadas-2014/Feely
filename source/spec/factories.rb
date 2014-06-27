@@ -1,11 +1,11 @@
 FactoryGirl.define do
-  factory :blue do
-    name { 'sky blue' }
-    hex_code { '#70DBDB' }
+  factory :color do
+    name { Faker::Lorem.word }
+    hex_code { "%06x" % (rand * 0xffffff) }
   end
 
-  factory :purple do
-    name { 'lavender' }
-    hex_code { '#CCCCFF' }
+  factory :story do
+    anecdote { Faker::Lorem.sentence }
+    color
   end
 end
