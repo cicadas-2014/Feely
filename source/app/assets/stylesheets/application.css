@@ -27,6 +27,7 @@
 body {
   border-top: 24px solid #000;
   border-bottom: 24px solid #000;
+  margin: 0 auto;
 }
 
 .color-selection{
@@ -36,7 +37,6 @@ body {
   height: 100px;
   margin: 32px 10%;
 }
-
 
 .colors-container {
   width: 80%;
@@ -58,6 +58,8 @@ h1, h2 {
 }
 
 h1 {
+  letter-spacing: 2px;
+
 }
 
 h2 {
@@ -67,8 +69,39 @@ h2 {
 .container {
   width: 100%;
   height: 100%;
-/*  left: 0;
-  top: 0;*/
   z-index: -2;
   text-align: center;
+}
+
+label {
+  float: left;
+  text-align: right;
+  margin-right: 15px;
+  width: 100px;
+}
+
+input {
+  border: 0 solid #FFF;
+  font-size: 1.6em;
+  width: 500px;
+  color: #3B3B3B;
+  font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+}
+
+input:focus {
+  outline: none;
+}
+
+input#submit-story-btn {
+  font-size: 1.2em;
+  width: 64px;
+  letter-spacing: 2px;
+}
+
+li {
+  font-size: 1.2em;
+  line-height: 1.4em;
+  color: #3B3B3B;
+  font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+  letter-spacing: 2px;
 }
