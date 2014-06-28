@@ -21,9 +21,3 @@ describe Story do
     end
   end
 end
-
-
- # expect {
- #        post :create, anecdote: touchy.anecdote, color_id: touchy.color_id
- #        expect(response).to redirect_to color_path(touchy.color_id)
- #      }.to change { Story.count }.by(1)

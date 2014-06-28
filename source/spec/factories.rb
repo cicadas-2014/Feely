@@ -8,14 +8,4 @@ FactoryGirl.define do
     anecdote { Faker::Lorem.sentence }
     color_id { 1 }
   end
-
-  # factory :story_no_anecdote do
-  #   anecdote { '' }
-  #   color_id { 1 }
-  # end
-
-  # factory :story_long_anecdote do
-  #   anecdote { 'a'*200 }
-  #   color_id { 1 }
-  # end
 end
