@@ -20,9 +20,14 @@ describe "Colors" do
 
   describe "User can click on a color element that" do
     it "redirects to the story page" do
-      visit root_path
-      pending("Don't know how to click id with capybara")
-      #click_link('#blue')
+
+    end
+  end
+
+  describe "User can view all stories of a specific color" do
+    it "by clicking on a color in the feed" do
+      visit stories_all_path
+      click_link('#purple')
       expect(response.status).to eq 200
     end
   end

@@ -6,7 +6,9 @@
 <% end %>
 </ul>
 
-
-<div class="colors-container-square">
-
+<div class="colors-container">
+  <% @stories.each do |story| %>
+  <a href="/colors/<%= story.color_id %>">
+  <div class="color-selection" id="<%=story.color.name%>" ></div></a>
+  <%end%>
 </div>
