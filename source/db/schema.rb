@@ -30,11 +30,6 @@ ActiveRecord::Schema.define(version: 20140626212646) do
     t.datetime "updated_at"
   end
 
-  create_table "tasks", force: true do |t|
-    t.string  "body"
-    t.integer "todo_id"
-  end
-
   create_table "todos", force: true do |t|
     t.string "title"
   end
