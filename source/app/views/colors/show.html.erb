@@ -1,0 +1,10 @@
+<div class="container">
+	<h1> Feely </h1>
+	<div class="colors-container">
+	  <% @stories.each do |story| %>
+		  <div class="story" id="<%= story.color.name %>">
+		  	<p><%= story.anecdote %></p>
+		  </div>
+	  <% end %>
+	</div>
+</div>
