@@ -2,22 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#orange {	background-color:orange;	}
-#blue 	{	background-color:blue;		}
-#yellow {	background-color:yellow;	}
-#purple {	background-color:purple;	}
-#red 		{	background-color:red;			}
-#green 	{	background-color:green;		}
-#pink 	{	background-color:pink;		}
-#black 	{	background-color:black;		}
-#white 	{	background-color:white;		}
+#orange {	background-color:#FF9051;	}
+#blue 	{	background-color:#346DFF; }
+#yellow {	background-color:#FFF654;	}
+#purple {	background-color:#9E65E8;	}
+#red 		{	background-color:#FF4A38; }
+#green 	{	background-color:#86FF94;	}
+#pink 	{	background-color:#FF65C6;	}
+#black 	{	background-color:#303030;	}
+#white 	{	background-color:#FDF5E6;	}
+
+
+body {
+	margin: 0px;
+	border-top: 24px solid #000;
+	border-bottom: 24px solid #000;
+}
+
 .color-selection{
 	display:inline-block;
 	border-radius: 50%;
 	width: 100px;
 	height: 100px;
-	margin: 30px 10%;
-	border:groove 2px #99FFFF;
+	margin: 32px 10%;
+	border: solid 0px #3B3B3B;
 }
 
 
@@ -25,6 +33,7 @@
 	width: 80%;
 	margin: 0 auto;
 }
+
 #background{
 	width: 100%;
 	height: 100%;
@@ -35,15 +44,28 @@
 }
 
 h1, h2 {
-	color: #993300;
+	color: #3B3B3B;
 	text-align: center;
-
+	font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+	padding: 10px;
+	margin: 0 auto;
 }
+
+h1 {
+	font-size: 2.4em;
+}
+
+h2 {
+	font-weight: 300;
+	font-size: 2.4em;
+}
+
 .container {
 	width: 100%;
 	height: 100%;
-	position: fixed;
+/*	position: fixed; */
 	left: 0;
 	top: 0;
 	z-index: -2;
+	text-align: center;
 }
