@@ -3,6 +3,8 @@ require 'spec_helper'
 describe StoriesController do
   let!(:color) { create :color }
   let!(:touchy) { Story.create( anecdote: Faker::Lorem.sentence, color_id: color.id) }
+  let!(:story) { create :story }
+  let!(:stories) { [story, create(:story)] }
 
   context 'stories#index' do
     it "renders the index view" do
@@ -10,10 +12,9 @@ describe StoriesController do
       expect(response).to render_template(:index)
     end
 
-    it "grabs all the stories and displays them" do
-      pending
-      # get :index
-      # expect()
+    it "assigns @stories to Story.all" do
+      get :index
+      expect(assigns(:stories)).to eq(Story.all)
     end
   end
 

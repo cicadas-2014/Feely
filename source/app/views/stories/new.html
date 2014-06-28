@@ -1,5 +1,5 @@
-<%= form_tag(color_stories_path, method: "post") do %>
-	<%= label_tag(:q, "story") %>
-	<%= text_field_tag("story") %>
-	<%= submit_tag("Submit") %>
+<%= form_for([:color, @story]) do |f| %>
+  <%= f.label :anecdote %>
+  <%= f.text_field :anecdote %>
+  <%= f.submit %>
 <% end %>
