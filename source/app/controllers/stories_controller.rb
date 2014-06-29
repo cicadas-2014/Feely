@@ -10,7 +10,7 @@ class StoriesController < ApplicationController
   end
 
   def create
-    @story = Story.new( anecdote: params[:story][:anecdote],
+    @story = Story.new( anecdote: params[:story][:anecdote].capitalize!,
                         color_id: params[:color_id] )
     if @story.save
       redirect_to stories_all_path

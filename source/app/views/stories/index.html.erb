@@ -1,7 +1,8 @@
 <div class="container">
 	<h1> Feely </h1>
+	<h3> <%= link_to "Again?", root_path %> </h3>
 	<div class="colors-container">
-	  <% @stories.each do |story| %>
+	  <% @stories.reverse.each do |story| %>
 		  <a href="/colors/<%= story.color_id %>">
 			  <div class="story" id="<%= story.color.name %>">
 			  	<p><%= story.anecdote %></p>
