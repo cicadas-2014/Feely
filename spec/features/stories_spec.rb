@@ -27,7 +27,7 @@ describe "User can create a new story" do
     let!(:story) { Story.create(anecdote: 'abc', color_id: color.id) }
     it "when on the main feed page" do
       visit stories_all_path(color_id: color.id)
-      click_link color.name
+      click_link "colors/#{color.id}"
       expect(page).to have_content story.color.name.capitalize
     end
   end
