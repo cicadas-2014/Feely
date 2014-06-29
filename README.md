@@ -41,6 +41,6 @@ Feely.
 CONTRIBUTORS: 
 
 The stylish Danielle (@danielleadams)
-The suave Jason (@jasonmat) 
+The suave Jason (@jasonamatney) 
 The sleek Jake (@masidonion)
 The splendid Simon
