@@ -18,7 +18,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: rails_with_rspec_development
+  database: feely_development
   pool: 5
   username:
   password:
@@ -47,7 +47,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: rails_with_rspec_test
+  database: feely_test
   pool: 5
   username:
   password:
@@ -55,7 +55,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: rails_with_rspec_production
+  database: feely_production
   pool: 5
   username:
   password:
