@@ -4,8 +4,9 @@ class ColorsController < ApplicationController
   end
 
   def show
-    @stories = Story.where(color_id: params[:id])
-    @color = @stories.first.color
+    @color = Color.find params[:id]
+    @stories = Story.where(color_id: @color.id)
   end
 
 end
+# 18
