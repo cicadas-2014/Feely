@@ -1,0 +1,5 @@
+<%= form_for([:color, @story]) do |f| %>
+  <%= f.label :anecdote %>
+  <%= f.text_field :anecdote, :placeholder => "How are you feeling?" %>
+  <%= f.submit "Quip", :id => 'submit-story-btn' %>
+<% end %>
