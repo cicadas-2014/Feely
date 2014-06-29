@@ -18,4 +18,5 @@
 $(document).ready(function() {
 	PageEvents.loadColorFade();
 	PageEvents.loadColorClick();
+	PageEvents.loadForm();
 });

@@ -160,7 +160,11 @@ a:active {
   text-align: center;
 }
 
-#story-form {
+.story-form {
   max-width: 600px;
-  margin: 100px auto;
+  margin: 0 auto;
+}
+
+.color-id {
+  display: none;
 }

@@ -1,11 +1,12 @@
 <div class="container" id="background">
 	<h1> Feely </h1>
-	<h2> Choose a Color </h2>
 	<div class="colors-container">
+		<h2> Choose a Color </h2>
 		<% @colors.each do |color| %>
 		<a href="/colors/<%= color.id %>/stories/new">
-		<div class="color-selection" id="<%=color.name %>"></div></a>
+		<div class="color-selection" id="<%= color.name %>"><span class="color-id"><%= color.id %></span></div></a>
 		<% end %>
 		<p id="footer-feed-link"> <%= link_to "Straight to the Feed", stories_all_path %> </p>
 	</div>
+	<div class="story-form"></div>
 </div>

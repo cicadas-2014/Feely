@@ -9,15 +9,14 @@ var PageEvents = {
 		});
 
 		$('.color-selection').mouseleave(function() {
-			$('#background').fadeTo(speed, 1.0);
 			$('body').css('background-color', '#FFF')
+			$('#background').fadeTo(speed, 1.0);
 		});
 	},
 
 	loadColorClick: function() {
 		var speed = 350;
 		$('.color-selection').click(function(event) {
-			event.preventDefault();
 			var color = $(this).css("background-color");
 			$('body').css('background-color', color)
 			$('#background').fadeTo(speed, 0.8);
@@ -26,16 +25,18 @@ var PageEvents = {
 		});
 	},
 
-	hideColorSelection: function() {
-		
+	loadForm: function() {
+		$('.color-selection').click(function(event) {
+			event.preventDefault();
+			var colorId = $(this).text();
+			$.ajax({
+				url: "/colors/" + colorId + "/stories/new",
+				type: "GET",
+				success: function(html) {
+					$('.story-form').html(html);
+					$('.story-form').showToggle();
+				}
+			})
+		})
 	}
 }
-
-// var elementEvents = {
-// 	hideColorSelection: function(event) {
-// 		$('.color-selection').click(function() {
-// 			event.preventDefault();
-// 			$('.colors-container').slideDown();
-// 		)}
-// 	}
-// }
