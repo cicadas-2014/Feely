@@ -6,7 +6,6 @@ describe ColorsController do
       get :index
       expect(response).to render_template(:index)
     end
-
   end
 
   context 'colors#show' do
@@ -16,7 +15,7 @@ describe ColorsController do
     end
 
     it 'assigns @stories to all stories of a color' do
-      get :show, :color_id => touchy.color_id,
+      get :show, :color_id => touchy.color_id
     end
 
     it 'assigns @color to the color' do

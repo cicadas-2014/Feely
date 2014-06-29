@@ -11,7 +11,11 @@ describe Story do
     end
 
     it "with an anecdote of over 200 characters" do
-      expect(build(:story, anecdote: 'a'*250)).to have(1).errors_on(:anecdote)
+      expect(build(:story, anecdote: 'a'*200)).to be_valid
+    end
+
+    it "with an anecdote of over 201 characters" do
+      expect(build(:story, anecdote: 'a'*201)).to have(1).errors_on(:anecdote)
     end
   end
 
@@ -20,4 +24,7 @@ describe Story do
       expect(build(:story)).to respond_to :color
     end
   end
+
+  # it "is valid with an anecdote"
+  # it "is invalid with an anecdote over 200 characters"
 end

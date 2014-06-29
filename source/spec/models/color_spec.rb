@@ -1,3 +1,0 @@
-describe Color do
-
-end
