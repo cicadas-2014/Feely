@@ -1,4 +1,4 @@
-var PageEvents = {
+var ColorIndexEvents = {
 
 	loadColorFade: function() {
 		var speed = 350;
@@ -29,13 +29,9 @@ var PageEvents = {
 		$('.color-selection').click(function(event) {
 			event.preventDefault();
 			var colorId = $(this).text();
-			$.ajax({
-				url: "/colors/" + colorId + "/stories/new",
-				type: "GET",
-				success: function(html) {
-					$('.story-form').html(html);
-					$('.story-form').showToggle();
-				}
+			var formRequest = $.get("/colors/" + colorId + "/stories/new")
+			formRequest.success(function(html) {
+				$('.story-form').html(html).fadeTo(speed, 0.8);
 			})
 		})
 	}

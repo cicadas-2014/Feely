@@ -9933,3 +9933,3821 @@ Started GET "/assets/story.js?body=1&_=1404079108420" for 127.0.0.1 at 2014-06-2
 
 
 Started GET "/assets/application.js?body=1&_=1404079108421" for 127.0.0.1 at 2014-06-29 17:58:29 -0400
+
+
+Started POST "/colors/1/stories" for 127.0.0.1 at 2014-06-29 18:00:01 -0400
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nSK+T7X5+X2B+eyps6YXkaORoPGr5mkkQAjcbFDt1vA=", "story"=>{"anecdote"=>"Awesome!"}, "commit"=>"Quip", "color_id"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stories" ("anecdote", "color_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["anecdote", "awesome!"], ["color_id", 1], ["created_at", "2014-06-29 22:00:01.057023"], ["updated_at", "2014-06-29 22:00:01.057023"]]
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/stories/all
+Completed 302 Found in 9ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/stories/all" for 127.0.0.1 at 2014-06-29 18:00:01 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.3ms)[0m  SELECT "stories".* FROM "stories"
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered stories/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:00:01 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:00:01 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:00:01 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 18:00:01 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:00:01 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 18:00:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 18:00:01 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 18:00:01 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 18:00:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 18:00:01 -0400
+
+
+Started GET "/colors/5" for 127.0.0.1 at 2014-06-29 18:00:05 -0400
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mStory Load (0.5ms)[0m  [1mSELECT  "stories".* FROM "stories"  WHERE "stories"."color_id" = 5  ORDER BY "stories"."id" ASC LIMIT 1[0m
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories"  WHERE "stories"."color_id" = 5[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered colors/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 16ms (Views: 10.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:00:07 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.2ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:00:09 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:00:09 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:00:09 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 18:00:09 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:00:09 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:00:09 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 18:00:09 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 18:00:09 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 18:00:09 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 18:00:09 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 18:00:09 -0400
+
+
+Started GET "/stories/all" for 127.0.0.1 at 2014-06-29 18:00:11 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.3ms)[0m  SELECT "stories".* FROM "stories"
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered stories/index.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 49ms (Views: 45.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/colors/2/stories/new" for 127.0.0.1 at 2014-06-29 18:00:15 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"2"}
+  Rendered stories/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:00:15 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404079209629" for 127.0.0.1 at 2014-06-29 18:00:15 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:00:15 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:00:15 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:00:15 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404079209630" for 127.0.0.1 at 2014-06-29 18:00:15 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404079209631" for 127.0.0.1 at 2014-06-29 18:00:15 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404079209632" for 127.0.0.1 at 2014-06-29 18:00:15 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404079209633" for 127.0.0.1 at 2014-06-29 18:00:15 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404079209634" for 127.0.0.1 at 2014-06-29 18:00:15 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:51:46 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.3ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:46 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:46 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 18:51:46 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 18:51:46 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:46 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:46 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 18:51:46 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 18:51:46 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 18:51:46 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 18:51:46 -0400
+
+
+Started GET "/colors/2/stories/new" for 127.0.0.1 at 2014-06-29 18:51:48 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"2"}
+  Rendered stories/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:48 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404082306725" for 127.0.0.1 at 2014-06-29 18:51:48 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:48 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:48 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:48 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404082306726" for 127.0.0.1 at 2014-06-29 18:51:48 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404082306727" for 127.0.0.1 at 2014-06-29 18:51:48 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404082306728" for 127.0.0.1 at 2014-06-29 18:51:48 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404082306729" for 127.0.0.1 at 2014-06-29 18:51:48 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404082306730" for 127.0.0.1 at 2014-06-29 18:51:48 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:51:52 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.3ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:52 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:52 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:52 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:52 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 18:51:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 18:51:52 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 18:51:52 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 18:51:52 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 18:51:52 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 18:51:52 -0400
+
+
+Started GET "/colors/3/stories/new" for 127.0.0.1 at 2014-06-29 18:51:54 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"3"}
+  Rendered stories/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1&_=1404082312666" for 127.0.0.1 at 2014-06-29 18:51:54 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:54 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:54 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:54 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:54 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404082312667" for 127.0.0.1 at 2014-06-29 18:51:54 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404082312668" for 127.0.0.1 at 2014-06-29 18:51:54 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404082312669" for 127.0.0.1 at 2014-06-29 18:51:54 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404082312670" for 127.0.0.1 at 2014-06-29 18:51:54 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404082312671" for 127.0.0.1 at 2014-06-29 18:51:54 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:51:56 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:56 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 18:51:56 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:56 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:56 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:56 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 18:51:56 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 18:51:56 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 18:51:56 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 18:51:56 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 18:51:56 -0400
+
+
+Started GET "/colors/9/stories/new" for 127.0.0.1 at 2014-06-29 18:51:58 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"9"}
+  Rendered stories/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:58 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404082316275" for 127.0.0.1 at 2014-06-29 18:51:58 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:58 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:51:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404082316276" for 127.0.0.1 at 2014-06-29 18:51:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404082316277" for 127.0.0.1 at 2014-06-29 18:51:58 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404082316278" for 127.0.0.1 at 2014-06-29 18:51:58 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404082316279" for 127.0.0.1 at 2014-06-29 18:51:58 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404082316280" for 127.0.0.1 at 2014-06-29 18:51:58 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:52:09 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.2ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 63ms (Views: 62.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:52:09 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:52:09 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:52:09 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:52:09 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 18:52:09 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 18:52:09 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 18:52:09 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 18:52:09 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 18:52:09 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 18:52:09 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 18:52:10 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:52:10 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:52:10 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:52:10 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:52:10 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404082329383" for 127.0.0.1 at 2014-06-29 18:52:10 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404082329384" for 127.0.0.1 at 2014-06-29 18:52:10 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404082329385" for 127.0.0.1 at 2014-06-29 18:52:10 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404082329386" for 127.0.0.1 at 2014-06-29 18:52:10 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404082329387" for 127.0.0.1 at 2014-06-29 18:52:10 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404082329388" for 127.0.0.1 at 2014-06-29 18:52:10 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:53:21 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.3ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     9: 		<p id="footer-feed-link"> <%= link_to "Straight to the Feed", stories_all_path %> </p>
+    10: 	</div>
+    11: 	<div class="story-form">
+    12: 		<%= form_for([:color, @story]) do |f| %>
+    13: 		  <%= f.label :anecdote %>
+    14: 		  <%= f.text_field :anecdote, :placeholder => "How are you feeling?" %>
+    15: 		  <%= f.submit "Quip", :id => 'submit-story-btn' %>
+  app/views/colors/index.html.erb:12:in `_app_views_colors_index_html_erb__59685418021036410_2199733120'
+
+
+  Rendered /Users/danielleadams/.rvm/gems/ruby-2.0.0-p481@global/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/danielleadams/.rvm/gems/ruby-2.0.0-p481@global/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/danielleadams/.rvm/gems/ruby-2.0.0-p481@global/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:53:22 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.3ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     9: 		<p id="footer-feed-link"> <%= link_to "Straight to the Feed", stories_all_path %> </p>
+    10: 	</div>
+    11: 	<div class="story-form">
+    12: 		<%= form_for([:color, @story]) do |f| %>
+    13: 		  <%= f.label :anecdote %>
+    14: 		  <%= f.text_field :anecdote, :placeholder => "How are you feeling?" %>
+    15: 		  <%= f.submit "Quip", :id => 'submit-story-btn' %>
+  app/views/colors/index.html.erb:12:in `_app_views_colors_index_html_erb__59685418021036410_2199733120'
+
+
+  Rendered /Users/danielleadams/.rvm/gems/ruby-2.0.0-p481@global/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/danielleadams/.rvm/gems/ruby-2.0.0-p481@global/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/danielleadams/.rvm/gems/ruby-2.0.0-p481@global/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:53:34 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     9: 		<p id="footer-feed-link"> <%= link_to "Straight to the Feed", stories_all_path %> </p>
+    10: 	</div>
+    11: 	<div class="story-form">
+    12: 		<%= form_for([:color, @story]) do |f| %>
+    13: 		  <%= f.label :anecdote %>
+    14: 		  <%= f.text_field :anecdote, :placeholder => "How are you feeling?" %>
+    15: 		  <%= f.submit "Quip", :id => 'submit-story-btn' %>
+  app/views/colors/index.html.erb:12:in `_app_views_colors_index_html_erb__59685418021036410_2199733120'
+
+
+  Rendered /Users/danielleadams/.rvm/gems/ruby-2.0.0-p481@global/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/danielleadams/.rvm/gems/ruby-2.0.0-p481@global/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/danielleadams/.rvm/gems/ruby-2.0.0-p481@global/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:53:35 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.3ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     9: 		<p id="footer-feed-link"> <%= link_to "Straight to the Feed", stories_all_path %> </p>
+    10: 	</div>
+    11: 	<div class="story-form">
+    12: 		<%= form_for([:color, @story]) do |f| %>
+    13: 		  <%= f.label :anecdote %>
+    14: 		  <%= f.text_field :anecdote, :placeholder => "How are you feeling?" %>
+    15: 		  <%= f.submit "Quip", :id => 'submit-story-btn' %>
+  app/views/colors/index.html.erb:12:in `_app_views_colors_index_html_erb__59685418021036410_2199733120'
+
+
+  Rendered /Users/danielleadams/.rvm/gems/ruby-2.0.0-p481@global/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/danielleadams/.rvm/gems/ruby-2.0.0-p481@global/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (41.4ms)
+  Rendered /Users/danielleadams/.rvm/gems/ruby-2.0.0-p481@global/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:53:35 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     9: 		<p id="footer-feed-link"> <%= link_to "Straight to the Feed", stories_all_path %> </p>
+    10: 	</div>
+    11: 	<div class="story-form">
+    12: 		<%= form_for([:color, @story]) do |f| %>
+    13: 		  <%= f.label :anecdote %>
+    14: 		  <%= f.text_field :anecdote, :placeholder => "How are you feeling?" %>
+    15: 		  <%= f.submit "Quip", :id => 'submit-story-btn' %>
+  app/views/colors/index.html.erb:12:in `_app_views_colors_index_html_erb__59685418021036410_2199733120'
+
+
+  Rendered /Users/danielleadams/.rvm/gems/ruby-2.0.0-p481@global/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/danielleadams/.rvm/gems/ruby-2.0.0-p481@global/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/danielleadams/.rvm/gems/ruby-2.0.0-p481@global/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:53:38 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.2ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     9: 		<p id="footer-feed-link"> <%= link_to "Straight to the Feed", stories_all_path %> </p>
+    10: 	</div>
+    11: 	<div class="story-form">
+    12: 		<%= form_for([:color, @story]) do |f| %>
+    13: 		  <%= f.label :anecdote %>
+    14: 		  <%= f.text_field :anecdote, :placeholder => "How are you feeling?" %>
+    15: 		  <%= f.submit "Quip", :id => 'submit-story-btn' %>
+  app/views/colors/index.html.erb:12:in `_app_views_colors_index_html_erb__59685418021036410_2199733120'
+
+
+  Rendered /Users/danielleadams/.rvm/gems/ruby-2.0.0-p481@global/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/danielleadams/.rvm/gems/ruby-2.0.0-p481@global/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/danielleadams/.rvm/gems/ruby-2.0.0-p481@global/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:54:06 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:06 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:06 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:07 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 18:54:07 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:07 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 18:54:07 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 18:54:07 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 18:54:07 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 18:54:07 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 18:54:07 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 18:54:08 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:08 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:08 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:08 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:08 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404082447041" for 127.0.0.1 at 2014-06-29 18:54:08 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404082447042" for 127.0.0.1 at 2014-06-29 18:54:08 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404082447043" for 127.0.0.1 at 2014-06-29 18:54:08 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404082447044" for 127.0.0.1 at 2014-06-29 18:54:08 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404082447045" for 127.0.0.1 at 2014-06-29 18:54:08 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404082447046" for 127.0.0.1 at 2014-06-29 18:54:08 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:54:10 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.2ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:10 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:10 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 18:54:10 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:10 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 18:54:10 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:10 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 18:54:10 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 18:54:10 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 18:54:10 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 18:54:10 -0400
+
+
+Started GET "/colors/8/stories/new" for 127.0.0.1 at 2014-06-29 18:54:11 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"8"}
+  Rendered stories/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:11 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404082450354" for 127.0.0.1 at 2014-06-29 18:54:11 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:11 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:11 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:11 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404082450355" for 127.0.0.1 at 2014-06-29 18:54:11 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404082450356" for 127.0.0.1 at 2014-06-29 18:54:11 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404082450357" for 127.0.0.1 at 2014-06-29 18:54:11 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404082450358" for 127.0.0.1 at 2014-06-29 18:54:11 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404082450359" for 127.0.0.1 at 2014-06-29 18:54:11 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:54:25 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.3ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 61ms (Views: 59.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:25 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:25 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 18:54:25 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:25 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:25 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 18:54:25 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 18:54:25 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 18:54:25 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 18:54:25 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 18:54:25 -0400
+
+
+Started GET "/colors/2/stories/new" for 127.0.0.1 at 2014-06-29 18:54:26 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"2"}
+  Rendered stories/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:26 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:26 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:26 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:54:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404082465942" for 127.0.0.1 at 2014-06-29 18:54:26 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404082465943" for 127.0.0.1 at 2014-06-29 18:54:26 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404082465944" for 127.0.0.1 at 2014-06-29 18:54:26 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404082465945" for 127.0.0.1 at 2014-06-29 18:54:26 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404082465946" for 127.0.0.1 at 2014-06-29 18:54:26 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404082465947" for 127.0.0.1 at 2014-06-29 18:54:26 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:56:08 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.3ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:56:08 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:56:08 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:56:08 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:56:08 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 18:56:08 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 18:56:08 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 18:56:08 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 18:56:08 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 18:56:08 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 18:56:08 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 18:56:09 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:57:06 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.3ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:57:06 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:57:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 18:57:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 18:57:06 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:57:06 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:57:06 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 18:57:06 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 18:57:06 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 18:57:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 18:57:06 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 18:57:07 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 29ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:58:14 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.7ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:58:14 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:58:14 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:58:14 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 18:58:14 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:58:14 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 18:58:14 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 18:58:14 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 18:58:14 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 18:58:14 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 18:58:14 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 18:58:15 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:58:26 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.3ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 64ms (Views: 62.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:58:26 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:58:26 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:58:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 18:58:26 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:58:26 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 18:58:26 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 18:58:26 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 18:58:26 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 18:58:26 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 18:58:26 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 18:58:27 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:58:27 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:58:27 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:58:27 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:58:27 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404082706828" for 127.0.0.1 at 2014-06-29 18:58:27 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404082706829" for 127.0.0.1 at 2014-06-29 18:58:27 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404082706830" for 127.0.0.1 at 2014-06-29 18:58:27 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404082706831" for 127.0.0.1 at 2014-06-29 18:58:27 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404082706832" for 127.0.0.1 at 2014-06-29 18:58:28 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404082706833" for 127.0.0.1 at 2014-06-29 18:58:28 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:59:16 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.3ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 63ms (Views: 62.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:59:16 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 18:59:16 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:59:16 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 18:59:16 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:59:16 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:59:16 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 18:59:16 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 18:59:16 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 18:59:16 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 18:59:16 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 18:59:17 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:59:17 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:59:17 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:59:17 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:59:17 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404082756560" for 127.0.0.1 at 2014-06-29 18:59:17 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404082756561" for 127.0.0.1 at 2014-06-29 18:59:17 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404082756562" for 127.0.0.1 at 2014-06-29 18:59:17 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404082756563" for 127.0.0.1 at 2014-06-29 18:59:17 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404082756564" for 127.0.0.1 at 2014-06-29 18:59:17 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404082756565" for 127.0.0.1 at 2014-06-29 18:59:17 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 18:59:31 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.3ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 18:59:31 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 18:59:31 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 18:59:31 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 18:59:31 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 18:59:31 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 18:59:31 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 18:59:31 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 18:59:31 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 18:59:31 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 18:59:31 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 18:59:32 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:00:06 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.3ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 59ms (Views: 58.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:07 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:00:07 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:07 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:07 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:00:07 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:07 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:00:07 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:00:07 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:00:07 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:00:07 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 19:00:08 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:08 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:08 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:08 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:08 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404082807148" for 127.0.0.1 at 2014-06-29 19:00:08 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404082807149" for 127.0.0.1 at 2014-06-29 19:00:08 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404082807150" for 127.0.0.1 at 2014-06-29 19:00:08 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404082807151" for 127.0.0.1 at 2014-06-29 19:00:08 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404082807152" for 127.0.0.1 at 2014-06-29 19:00:08 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404082807153" for 127.0.0.1 at 2014-06-29 19:00:08 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:00:17 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.3ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:17 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:00:17 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:17 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:00:17 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:17 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:17 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:00:17 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:00:17 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:00:17 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:00:17 -0400
+
+
+Started GET "/colors/2/stories/new" for 127.0.0.1 at 2014-06-29 19:00:18 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"2"}
+  Rendered stories/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:00:30 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.2ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:30 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:30 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:30 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:00:30 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:00:30 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:30 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:00:30 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:00:30 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:00:30 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:00:30 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 19:00:32 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:33 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:33 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:33 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:00:33 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404082830664" for 127.0.0.1 at 2014-06-29 19:00:33 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404082830665" for 127.0.0.1 at 2014-06-29 19:00:33 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404082830666" for 127.0.0.1 at 2014-06-29 19:00:33 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404082830667" for 127.0.0.1 at 2014-06-29 19:00:33 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404082830668" for 127.0.0.1 at 2014-06-29 19:00:33 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404082830669" for 127.0.0.1 at 2014-06-29 19:00:33 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:01:09 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.4ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:01:09 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:09 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:01:09 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:09 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:09 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:01:09 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:09 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:01:09 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:01:09 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:01:09 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 19:01:10 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:10 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:10 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404082869483" for 127.0.0.1 at 2014-06-29 19:01:10 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:10 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:10 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404082869484" for 127.0.0.1 at 2014-06-29 19:01:10 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404082869485" for 127.0.0.1 at 2014-06-29 19:01:10 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404082869486" for 127.0.0.1 at 2014-06-29 19:01:10 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404082869487" for 127.0.0.1 at 2014-06-29 19:01:10 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404082869488" for 127.0.0.1 at 2014-06-29 19:01:10 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:01:14 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.3ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:14 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:14 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:14 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:14 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:01:14 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:01:14 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:01:14 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:01:14 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:01:14 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:01:14 -0400
+
+
+Started GET "/colors/8/stories/new" for 127.0.0.1 at 2014-06-29 19:01:16 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"8"}
+  Rendered stories/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:16 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:16 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404082874838" for 127.0.0.1 at 2014-06-29 19:01:16 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:16 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:16 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404082874839" for 127.0.0.1 at 2014-06-29 19:01:16 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404082874840" for 127.0.0.1 at 2014-06-29 19:01:16 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404082874841" for 127.0.0.1 at 2014-06-29 19:01:16 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404082874842" for 127.0.0.1 at 2014-06-29 19:01:16 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404082874843" for 127.0.0.1 at 2014-06-29 19:01:16 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:01:58 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.3ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:58 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:01:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:01:58 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:58 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:01:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:01:58 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:01:58 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:01:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:01:58 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 19:02:00 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:02:00 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:02:00 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404082918341" for 127.0.0.1 at 2014-06-29 19:02:00 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:02:00 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:02:00 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404082918342" for 127.0.0.1 at 2014-06-29 19:02:00 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404082918343" for 127.0.0.1 at 2014-06-29 19:02:00 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404082918344" for 127.0.0.1 at 2014-06-29 19:02:00 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404082918345" for 127.0.0.1 at 2014-06-29 19:02:00 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404082918346" for 127.0.0.1 at 2014-06-29 19:02:00 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:02:13 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.3ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:02:13 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:02:13 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:02:13 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:02:13 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:02:13 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:02:13 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:02:13 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:02:13 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:02:13 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:02:13 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 19:02:14 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:02:14 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:02:14 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:02:14 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:02:14 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404082933716" for 127.0.0.1 at 2014-06-29 19:02:14 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404082933717" for 127.0.0.1 at 2014-06-29 19:02:14 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404082933718" for 127.0.0.1 at 2014-06-29 19:02:14 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404082933719" for 127.0.0.1 at 2014-06-29 19:02:14 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404082933720" for 127.0.0.1 at 2014-06-29 19:02:14 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404082933721" for 127.0.0.1 at 2014-06-29 19:02:14 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:04:26 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.6ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:04:26 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:04:26 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:04:26 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:04:26 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:04:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:04:26 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:04:26 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:04:26 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:04:26 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:04:26 -0400
+
+
+Started GET "/colors/2/stories/new" for 127.0.0.1 at 2014-06-29 19:04:27 -0400
+Processing by StoriesController#new as HTML
+  Parameters: {"color_id"=>"2"}
+  Rendered stories/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/colors/2/stories/new" for 127.0.0.1 at 2014-06-29 19:05:04 -0400
+Processing by StoriesController#new as HTML
+  Parameters: {"color_id"=>"2"}
+  Rendered stories/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 62ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:04 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:04 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:04 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:04 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:04 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:04 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:04 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:04 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:04 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:04 -0400
+
+
+Started GET "/colors/2/stories/new" for 127.0.0.1 at 2014-06-29 19:05:04 -0400
+Processing by StoriesController#new as HTML
+  Parameters: {"color_id"=>"2"}
+  Rendered stories/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:04 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:04 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:04 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:04 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:05 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:05 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:05 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:05 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:05 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:05 -0400
+
+
+Started GET "/colors/2/stories/new" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+Processing by StoriesController#new as HTML
+  Parameters: {"color_id"=>"2"}
+  Rendered stories/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/colors/2/stories/new" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+Processing by StoriesController#new as HTML
+  Parameters: {"color_id"=>"2"}
+  Rendered stories/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:06 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:05:09 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.7ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:09 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:09 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:09 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:09 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:09 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:05:09 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:09 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:09 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:09 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:05:09 -0400
+
+
+Started GET "/colors/2/stories/new" for 127.0.0.1 at 2014-06-29 19:05:10 -0400
+Processing by StoriesController#new as HTML
+  Parameters: {"color_id"=>"2"}
+  Rendered stories/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/colors/2/stories/new" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+Processing by StoriesController#new as HTML
+  Parameters: {"color_id"=>"2"}
+  Rendered stories/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/colors/2/stories/new" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+Processing by StoriesController#new as HTML
+  Parameters: {"color_id"=>"2"}
+  Rendered stories/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:43 -0400
+
+
+Started GET "/colors/2/stories/new" for 127.0.0.1 at 2014-06-29 19:06:44 -0400
+Processing by StoriesController#new as HTML
+  Parameters: {"color_id"=>"2"}
+  Rendered stories/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:44 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:44 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:44 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:44 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:44 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:44 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:44 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:44 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:44 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:06:46 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.3ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:46 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:46 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:46 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:46 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:46 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:46 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:46 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:46 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:46 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:46 -0400
+
+
+Started GET "/colors/2/stories/new" for 127.0.0.1 at 2014-06-29 19:06:47 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"2"}
+  Rendered stories/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:47 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:47 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404083206670" for 127.0.0.1 at 2014-06-29 19:06:47 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:47 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404083206671" for 127.0.0.1 at 2014-06-29 19:06:47 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404083206672" for 127.0.0.1 at 2014-06-29 19:06:47 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404083206673" for 127.0.0.1 at 2014-06-29 19:06:47 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404083206674" for 127.0.0.1 at 2014-06-29 19:06:48 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404083206675" for 127.0.0.1 at 2014-06-29 19:06:48 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:06:50 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.2ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:50 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:50 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:50 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:50 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:50 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:50 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:50 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:50 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:50 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:06:50 -0400
+
+
+Started GET "/colors/8/stories/new" for 127.0.0.1 at 2014-06-29 19:06:51 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"8"}
+  Rendered stories/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:51 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404083210583" for 127.0.0.1 at 2014-06-29 19:06:51 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:51 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:51 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:06:51 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404083210584" for 127.0.0.1 at 2014-06-29 19:06:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404083210585" for 127.0.0.1 at 2014-06-29 19:06:52 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404083210586" for 127.0.0.1 at 2014-06-29 19:06:52 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404083210587" for 127.0.0.1 at 2014-06-29 19:06:52 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404083210588" for 127.0.0.1 at 2014-06-29 19:06:52 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:08:17 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.3ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:17 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:17 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:17 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:17 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:17 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:17 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:17 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:17 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:17 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:17 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 19:08:19 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 99ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:19 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:19 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404083297882" for 127.0.0.1 at 2014-06-29 19:08:19 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:19 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404083297883" for 127.0.0.1 at 2014-06-29 19:08:19 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404083297884" for 127.0.0.1 at 2014-06-29 19:08:19 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404083297885" for 127.0.0.1 at 2014-06-29 19:08:19 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404083297886" for 127.0.0.1 at 2014-06-29 19:08:19 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404083297887" for 127.0.0.1 at 2014-06-29 19:08:19 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:08:24 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.2ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:24 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:24 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:24 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:24 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:24 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:24 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:24 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:24 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:24 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:24 -0400
+
+
+Started GET "/colors/9/stories/new" for 127.0.0.1 at 2014-06-29 19:08:26 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"9"}
+  Rendered stories/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404083304390" for 127.0.0.1 at 2014-06-29 19:08:26 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:26 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:26 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:26 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404083304391" for 127.0.0.1 at 2014-06-29 19:08:26 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404083304392" for 127.0.0.1 at 2014-06-29 19:08:26 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404083304393" for 127.0.0.1 at 2014-06-29 19:08:26 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404083304394" for 127.0.0.1 at 2014-06-29 19:08:26 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404083304395" for 127.0.0.1 at 2014-06-29 19:08:26 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:08:51 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:51 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:51 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:51 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:51 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:51 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:51 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:51 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:51 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:51 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:51 -0400
+
+
+Started GET "/colors/2/stories/new" for 127.0.0.1 at 2014-06-29 19:08:53 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"2"}
+  Rendered stories/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:53 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:53 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:53 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:53 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404083331633" for 127.0.0.1 at 2014-06-29 19:08:53 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404083331634" for 127.0.0.1 at 2014-06-29 19:08:53 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404083331635" for 127.0.0.1 at 2014-06-29 19:08:53 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404083331636" for 127.0.0.1 at 2014-06-29 19:08:53 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404083331637" for 127.0.0.1 at 2014-06-29 19:08:53 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404083331638" for 127.0.0.1 at 2014-06-29 19:08:53 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:08:55 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.3ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:55 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:55 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:55 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:55 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:55 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:55 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:55 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:55 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:55 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:08:55 -0400
+
+
+Started GET "/colors/6/stories/new" for 127.0.0.1 at 2014-06-29 19:08:56 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"6"}
+  Rendered stories/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:56 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:56 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:56 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404083335120" for 127.0.0.1 at 2014-06-29 19:08:56 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:08:56 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404083335121" for 127.0.0.1 at 2014-06-29 19:08:56 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404083335122" for 127.0.0.1 at 2014-06-29 19:08:56 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404083335123" for 127.0.0.1 at 2014-06-29 19:08:56 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404083335124" for 127.0.0.1 at 2014-06-29 19:08:56 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404083335125" for 127.0.0.1 at 2014-06-29 19:08:56 -0400
+
+
+Started POST "/colors/6/stories" for 127.0.0.1 at 2014-06-29 19:09:11 -0400
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nSK+T7X5+X2B+eyps6YXkaORoPGr5mkkQAjcbFDt1vA=", "story"=>{"anecdote"=>"perfect"}, "commit"=>"Quip", "color_id"=>"6"}
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "stories" ("anecdote", "color_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["anecdote", "perfect"], ["color_id", 6], ["created_at", "2014-06-29 23:09:11.851206"], ["updated_at", "2014-06-29 23:09:11.851206"]]
+  [1m[36m (6.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/stories/all
+Completed 302 Found in 10ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/stories/all" for 127.0.0.1 at 2014-06-29 19:09:11 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.3ms)[0m  SELECT "stories".* FROM "stories"
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mColor Load (0.5ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered stories/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:09:11 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:09:11 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:09:11 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:09:11 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:09:11 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:09:11 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:09:11 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:09:11 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:09:11 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:09:11 -0400
+
+
+Started GET "/colors/1" for 127.0.0.1 at 2014-06-29 19:09:20 -0400
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStory Load (0.9ms)[0m  SELECT  "stories".* FROM "stories"  WHERE "stories"."color_id" = 1  ORDER BY "stories"."id" ASC LIMIT 1
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mStory Load (0.4ms)[0m  SELECT "stories".* FROM "stories"  WHERE "stories"."color_id" = 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered colors/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 20ms (Views: 15.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/stories/all" for 127.0.0.1 at 2014-06-29 19:09:24 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.8ms)[0m  SELECT "stories".* FROM "stories"
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.4ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.7ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mColor Load (0.5ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered stories/index.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 88ms (Views: 81.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/colors/6" for 127.0.0.1 at 2014-06-29 19:09:25 -0400
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mStory Load (1.4ms)[0m  SELECT  "stories".* FROM "stories"  WHERE "stories"."color_id" = 6  ORDER BY "stories"."id" ASC LIMIT 1
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mStory Load (0.4ms)[0m  SELECT "stories".* FROM "stories"  WHERE "stories"."color_id" = 6
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  Rendered colors/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 19ms (Views: 13.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/stories/all" for 127.0.0.1 at 2014-06-29 19:09:27 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.6ms)[0m  SELECT "stories".* FROM "stories"
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.8ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered stories/index.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 49ms (Views: 44.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/colors/1" for 127.0.0.1 at 2014-06-29 19:09:27 -0400
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStory Load (1.4ms)[0m  SELECT  "stories".* FROM "stories"  WHERE "stories"."color_id" = 1  ORDER BY "stories"."id" ASC LIMIT 1
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mStory Load (0.3ms)[0m  SELECT "stories".* FROM "stories"  WHERE "stories"."color_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered colors/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 18ms (Views: 13.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/stories/all" for 127.0.0.1 at 2014-06-29 19:09:28 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (3.7ms)[0m  SELECT "stories".* FROM "stories"
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.3ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mColor Load (0.3ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered stories/index.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 52ms (Views: 44.4ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/stories/all" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.3ms)[0m  SELECT "stories".* FROM "stories"
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.8ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered stories/index.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 45ms (Views: 41.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/stories/all" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.3ms)[0m  SELECT "stories".* FROM "stories"
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered stories/index.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:34 -0400
+
+
+Started GET "/stories/all" for 127.0.0.1 at 2014-06-29 19:11:47 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.4ms)[0m  SELECT "stories".* FROM "stories"
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.5ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered stories/index.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 48ms (Views: 44.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:47 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:47 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:47 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:47 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:47 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:47 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:47 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:47 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:11:49 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.5ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:49 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:49 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:49 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:49 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:49 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:49 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:49 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:49 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:49 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:49 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 19:11:51 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:51 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:51 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:51 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404083509665" for 127.0.0.1 at 2014-06-29 19:11:51 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:51 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404083509666" for 127.0.0.1 at 2014-06-29 19:11:51 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404083509667" for 127.0.0.1 at 2014-06-29 19:11:51 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404083509668" for 127.0.0.1 at 2014-06-29 19:11:51 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404083509669" for 127.0.0.1 at 2014-06-29 19:11:51 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404083509670" for 127.0.0.1 at 2014-06-29 19:11:51 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:11:54 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.3ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:54 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:54 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:54 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:54 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:54 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:54 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:54 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:54 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:54 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:11:54 -0400
+
+
+Started GET "/colors/6/stories/new" for 127.0.0.1 at 2014-06-29 19:11:55 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"6"}
+  Rendered stories/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:55 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:55 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:55 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404083514365" for 127.0.0.1 at 2014-06-29 19:11:55 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:11:55 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404083514366" for 127.0.0.1 at 2014-06-29 19:11:55 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404083514367" for 127.0.0.1 at 2014-06-29 19:11:55 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404083514368" for 127.0.0.1 at 2014-06-29 19:11:55 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404083514369" for 127.0.0.1 at 2014-06-29 19:11:55 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404083514370" for 127.0.0.1 at 2014-06-29 19:11:55 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:12:19 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.6ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 65ms (Views: 63.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:19 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:19 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:19 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:19 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:19 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:19 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:19 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:19 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:19 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 19:12:21 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:21 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:21 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404083539946" for 127.0.0.1 at 2014-06-29 19:12:21 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404083539947" for 127.0.0.1 at 2014-06-29 19:12:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404083539948" for 127.0.0.1 at 2014-06-29 19:12:21 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404083539949" for 127.0.0.1 at 2014-06-29 19:12:21 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404083539950" for 127.0.0.1 at 2014-06-29 19:12:21 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404083539951" for 127.0.0.1 at 2014-06-29 19:12:21 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:12:33 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:33 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:33 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:33 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:33 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:33 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:33 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:33 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:33 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:33 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:33 -0400
+
+
+Started GET "/colors/2/stories/new" for 127.0.0.1 at 2014-06-29 19:12:34 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"2"}
+  Rendered stories/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:34 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:34 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:34 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404083553940" for 127.0.0.1 at 2014-06-29 19:12:34 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:34 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404083553941" for 127.0.0.1 at 2014-06-29 19:12:34 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404083553942" for 127.0.0.1 at 2014-06-29 19:12:34 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404083553943" for 127.0.0.1 at 2014-06-29 19:12:34 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404083553944" for 127.0.0.1 at 2014-06-29 19:12:34 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404083553945" for 127.0.0.1 at 2014-06-29 19:12:34 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:12:45 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.2ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:45 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:45 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:45 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:45 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:45 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:45 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:45 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:45 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:45 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:45 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 19:12:46 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:46 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404083565293" for 127.0.0.1 at 2014-06-29 19:12:46 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:46 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:46 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:46 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404083565294" for 127.0.0.1 at 2014-06-29 19:12:46 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404083565295" for 127.0.0.1 at 2014-06-29 19:12:46 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404083565296" for 127.0.0.1 at 2014-06-29 19:12:46 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404083565297" for 127.0.0.1 at 2014-06-29 19:12:46 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404083565298" for 127.0.0.1 at 2014-06-29 19:12:46 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:12:55 -0400
+Processing by ColorsController#index as HTML
+  [1m[36mColor Load (0.3ms)[0m  [1mSELECT "colors".* FROM "colors"[0m
+  Rendered colors/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:55 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:55 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:55 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:55 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:55 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:55 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:55 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:55 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:55 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:12:55 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 19:12:56 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:56 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:56 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404083575085" for 127.0.0.1 at 2014-06-29 19:12:56 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:56 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:12:56 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404083575086" for 127.0.0.1 at 2014-06-29 19:12:56 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404083575087" for 127.0.0.1 at 2014-06-29 19:12:56 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404083575088" for 127.0.0.1 at 2014-06-29 19:12:56 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404083575089" for 127.0.0.1 at 2014-06-29 19:12:56 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404083575090" for 127.0.0.1 at 2014-06-29 19:12:56 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-29 19:13:20 -0400
+Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.3ms)[0m  SELECT "colors".* FROM "colors"
+  Rendered colors/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:13:20 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:13:20 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:13:20 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:13:20 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:13:20 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:13:20 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:13:20 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:13:20 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:13:20 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:13:20 -0400
+
+
+Started GET "/colors/1/stories/new" for 127.0.0.1 at 2014-06-29 19:13:21 -0400
+Processing by StoriesController#new as */*
+  Parameters: {"color_id"=>"1"}
+  Rendered stories/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:13:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1&_=1404083600571" for 127.0.0.1 at 2014-06-29 19:13:21 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:13:21 -0400
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:13:21 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:13:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1&_=1404083600572" for 127.0.0.1 at 2014-06-29 19:13:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1&_=1404083600573" for 127.0.0.1 at 2014-06-29 19:13:21 -0400
+
+
+Started GET "/assets/color.js?body=1&_=1404083600574" for 127.0.0.1 at 2014-06-29 19:13:21 -0400
+
+
+Started GET "/assets/story.js?body=1&_=1404083600575" for 127.0.0.1 at 2014-06-29 19:13:21 -0400
+
+
+Started GET "/assets/application.js?body=1&_=1404083600576" for 127.0.0.1 at 2014-06-29 19:13:21 -0400
+
+
+Started POST "/colors/1/stories" for 127.0.0.1 at 2014-06-29 19:13:37 -0400
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nSK+T7X5+X2B+eyps6YXkaORoPGr5mkkQAjcbFDt1vA=", "story"=>{"anecdote"=>"excited"}, "commit"=>"Quip", "color_id"=>"1"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "stories" ("anecdote", "color_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["anecdote", "excited"], ["color_id", 1], ["created_at", "2014-06-29 23:13:37.870580"], ["updated_at", "2014-06-29 23:13:37.870580"]]
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/stories/all
+Completed 302 Found in 13ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/stories/all" for 127.0.0.1 at 2014-06-29 19:13:37 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.3ms)[0m  SELECT "stories".* FROM "stories"
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.2ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mColor Load (0.1ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "colors".* FROM "colors"  WHERE "colors"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered stories/index.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/color.css?body=1" for 127.0.0.1 at 2014-06-29 19:13:37 -0400
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-06-29 19:13:37 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-29 19:13:37 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-29 19:13:37 -0400
+
+
+Started GET "/assets/story.css?body=1" for 127.0.0.1 at 2014-06-29 19:13:37 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-29 19:13:37 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-29 19:13:37 -0400
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2014-06-29 19:13:37 -0400
+
+
+Started GET "/assets/story.js?body=1" for 127.0.0.1 at 2014-06-29 19:13:37 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-29 19:13:37 -0400
