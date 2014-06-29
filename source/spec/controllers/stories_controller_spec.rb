@@ -26,10 +26,10 @@ describe StoriesController do
       }.to change { Story.count }.by(1)
     end
 
-    it "doesn't create a story with invalid params" doews2
+    it "doesn't create a story with invalid params" do
       expect {
         pending("add validations to model before testing this")
-        expect(response.status).to eq 422sssss
+        expect(response.status).to eq 422
       }.to_not change { Story.count }
     end
   end

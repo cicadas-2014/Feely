@@ -16,14 +16,14 @@ describe ColorsController do
     end
 
     it 'assigns @stories to all stories of a color' do
-      get :show, :color_id => touchy.color_id,
+      get :show, :color_id => touchy.color_id
     end
 
     it 'assigns @color to the color' do
+      expect(assign(:color)).to eq color
     end
 
-    it 'only displays a single color on the page' do
-
+    it '' do
     end
   end
 end

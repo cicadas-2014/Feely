@@ -20,7 +20,9 @@ describe "Colors" do
 
   describe "User can click on a color element that" do
     it "redirects to the story page" do
-
+      visit stories_all_path
+      click_link('#red')
+      expect(response).to redirect_to '/story'
     end
   end
 
