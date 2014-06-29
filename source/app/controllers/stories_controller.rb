@@ -10,12 +10,13 @@ class StoriesController < ApplicationController
   end
 
   def create
-    @story = Story.new( anecdote: params[:story][:anecdote].capitalize!,
+    @story = Story.new( anecdote: params[:story][:anecdote],
                         color_id: params[:color_id] )
     if @story.save
       redirect_to stories_all_path
     else
-      render :partial => 'shared/errors', :locals => { :object => @story }, :status => :unprocessable_entity
+      raise params.inspect
+      # render :partial => 'shared/errors', :locals => { :object => @story }, :status => :unprocessable_entity
     end
   end
 
