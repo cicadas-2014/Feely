@@ -6,6 +6,7 @@ class StoriesController < ApplicationController
   end
 
   def new
+    p params
     @story = Story.new
   end
 
