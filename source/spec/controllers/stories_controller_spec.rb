@@ -31,7 +31,7 @@ describe StoriesController do
   end
 
   context "stories#create" do
-    it "creates a story with valid params" do
+    it "creates a story with valid params"  do
       expect {
         post :create, anecdote: touchy.anecdote, color_id: touchy.color_id
       }.to change { Story.count }.by(1)
@@ -47,27 +47,11 @@ describe StoriesController do
       expect(response).to render_template :'shared/_errors'
     end
 
-    it "doesn't create a story with invalid params" do
+    it "doesn't create a story with invalid params"
       expect {
         pending("add validations to model before testing this")
         expect(response.status).to eq 422
       }.to_not change { Story.count }
     end
   end
-  # context "stories#show" do
-  #   it "is successful" do
-  #     get :show, :color_id => touchy.color_id, :id => touchy.id
-  #     expect(response).to be_success
-  #   end
-
-  #   it "assigns @color to color" do
-  #     get :show, :color_id => touchy.color_id, :id => touchy.id
-  #     expect(assigns(:color)).to eq touchy.color
-  #   end
-
-  #   it "assigns @story to story" do
-  #     get :show, :color_id => touchy.color_id, :id => touchy.id
-  #     expect(assigns(:stories)).to eq [touchy]
-  #   end
-  # end
 end

@@ -15,10 +15,10 @@ class StoriesController < ApplicationController
     if @story.save
       redirect_to stories_all_path
     else
-      render :partial => 'shared/errors', :locals => { :object => @story }, :status => :unprocessable_entity
+      raise params.inspect
+      # render :partial => 'shared/errors', :locals => { :object => @story }, :status => :unprocessable_entity
     end
   end
-
 
   def show
     @color = Color.find(params[:color_id])
