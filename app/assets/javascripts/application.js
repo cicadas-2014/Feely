@@ -16,6 +16,6 @@
 //= require_tree .
 
 $(document).ready(function() {
-	BackgroundColorEvents.loadColorFade();
-	BackgroundColorEvents.loadColorClick();
+	PageEvents.loadColorFade();
+	PageEvents.loadColorClick();
 });
