@@ -53,8 +53,8 @@ body {
 }
 
 .colors-container {
-  width: 64%;
-  margin: 0 auto;
+  width: 63%;
+  margin: 0 auto 32px;
 }
 
 #background{
@@ -155,9 +155,8 @@ a:active {
   width: 200px;
   display: inline-block;
   margin: 32px 4%;
-  padding: 12px;
-  text-align: center;
-  vertical-align: center;
+  padding: 64px 12px;
+  float: left;
 }
 
 .story-form {
