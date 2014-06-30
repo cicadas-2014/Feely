@@ -17,5 +17,5 @@
 
 
 $(document).ready(function() {
-  $(".fancy_title").lettering();
+  $("#fancy_title").lettering();
 });
