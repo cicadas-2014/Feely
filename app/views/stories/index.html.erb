@@ -8,6 +8,7 @@
 	  <% @stories.reverse.each do |story| %>
 		  <a href="/colors/<%= story.color_id %>">
 			  <div class="story" id="<%= story.color.name %>">
+			  	<p><%= story.anecdote %></p>
 			  </div>
 		  </a>
 	  <% end %>

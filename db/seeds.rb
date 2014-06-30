@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 colors = ['orange', 'blue', 'yellow', 'purple', 'red', 'green', 'pink', 'black', 'white']
-color_hexes = ['#FF9051', '#346DFF', '#FFF654', '#9E65E8', '#FF4A38', '#86FF94', '#FF65C6', '#303030', '#FDF5E6']
+color_hexes = ['#E36B23', '#4584BE', '#E6C92E', '#9E65E8', '#FF4A38', '#5DA028', '#FF65C6', '#303030', '#FDF5E6']
 
 anecdotes = ["understanding", "great", "playful", "calm", "confident", "gay", "courageous", "peaceful", "reliable", "joyous", "energetic", "at ease", "easy", "lucky", "liberated", "comfortable", "amazed", "fortunate", "optimistic", "pleased", "free", "delighted", "provocative", "encouraged", "sympathetic", "overjoyed", "impulsive", "clever", "interested", "gleeful", "free", "surprised", "satisfied", "thankful", "frisky", "content", "receptive", "important", "animated", "quiet", "accepting", "festive", "spirited", "certain", "kind", "ecstatic", "thrilled", "relaxed"]
 

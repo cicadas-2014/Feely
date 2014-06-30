@@ -15,16 +15,10 @@
 //= require turbolinks
 //= require_tree .
 
-<<<<<<< HEAD
-
 $(document).ready(function() {
   $("#fancy_title").lettering();
-});
-=======
-$(document).ready(function() {
 	ColorIndexEvents.loadColorFade();
 	ColorIndexEvents.loadColorClick();
 	ColorIndexEvents.loadForm();
-	StoryIndexEvents.displayColorStories();
+	// StoryIndexEvents.displayColorStories();
 });
->>>>>>> master
