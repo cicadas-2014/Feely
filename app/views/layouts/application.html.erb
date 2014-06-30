@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <title>Feely</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= javascript_include_tag 'jquery-lettering', media: 'all'%>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= yield %>
-<div id="bottom"></div>
+  <%= yield %>
+  <div id="bottom"></div>
 </body>
 </html>
