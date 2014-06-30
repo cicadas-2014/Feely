@@ -19,4 +19,5 @@ $(document).ready(function() {
 	ColorIndexEvents.loadColorFade();
 	ColorIndexEvents.loadColorClick();
 	ColorIndexEvents.loadForm();
+	StoryIndexEvents.displayColorStories();
 });

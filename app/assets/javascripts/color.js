@@ -31,7 +31,7 @@ var ColorIndexEvents = {
 			var colorId = $(this).text();
 			var formRequest = $.get("/colors/" + colorId + "/stories/new")
 			formRequest.success(function(html) {
-				$('.story-form').html(html).fadeTo(speed, 0.8);
+				$('.story-form').html(html).fadeTo(200, 0.8);
 			})
 		})
 	}
