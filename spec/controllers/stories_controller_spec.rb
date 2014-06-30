@@ -47,7 +47,7 @@ describe StoriesController do
       expect(response).to render_template :'shared/_errors'
     end
 
-    it "doesn't create a story with invalid params"
+    it "doesn't create a story with invalid params" do
       expect {
         pending("add validations to model before testing this")
         expect(response.status).to eq 422
