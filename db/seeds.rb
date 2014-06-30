@@ -17,6 +17,6 @@ anecdotes = [anecdotes_positive, anecdotes_negative]
 9.times { |x| Color.create(name: colors[x], hex_code: color_hexes[x]) }
 
 50.times do
-  Story.create(anecdote: anecdotes[(rand(0..1)].sample, color_id: rand(1..9))
+  Story.create(anecdote: anecdotes.sample, color_id: rand(1..9))
 end
 
