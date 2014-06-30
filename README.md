@@ -38,7 +38,7 @@ Don't think. Just do.
 
 Feely. 
 
-## CONTRIBUTORS: 
+## Contributors
 
 * The stylish Danielle (@danielleadams)
 * The suave Jason (@jasonamatney) 
