@@ -1,0 +1,15 @@
+<div class="container">
+  <div id="logo">
+    <h4 id="fancy_title">Feely</h4>
+  </div>
+  <br><br>
+	<h3> <%= link_to "Again?", root_path %> </h3>
+	<div class="colors-container">
+	  <% @stories.reverse.each do |story| %>
+		  <a href="/colors/<%= story.color_id %>">
+			  <div class="story" id="<%= story.color.name %>">
+			  </div>
+		  </a>
+	  <% end %>
+	</div>
+</div>

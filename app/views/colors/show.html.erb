@@ -1,0 +1,10 @@
+<h1> <%= link_to "That #{@stories.first.color.name.capitalize} Feely", stories_all_path %> </h1>
+<h3> <%= link_to "Again?", root_path %> </h3>
+<div class="colors-container">
+  <% @stories.reverse.each do |story| %>
+	  <div class="story" id="<%= story.color.name %>">
+	  	<p><%= story.anecdote %></p>
+	  </div>
+  <% end %>
+</div>
+<div class="single-color-container"></div>
