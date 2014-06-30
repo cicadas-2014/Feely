@@ -38,9 +38,17 @@ Don't think. Just do.
 
 Feely. 
 
-CONTRIBUTORS: 
+## CONTRIBUTORS: 
 
 * The stylish Danielle (@danielleadams)
 * The suave Jason (@jasonamatney) 
 * The sleek Jake (@huhnytunes)
 * The splendid Simon (@simonedice3)
+
+## Heroku Link
+
+[Feely](glacial-temple-8136.herokuapp.com)
+
+## Trello Board 
+
+[Feely](https://trello.com/b/Pd4P6ua8/feely)
