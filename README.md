@@ -40,7 +40,7 @@ Feely.
 
 CONTRIBUTORS: 
 
-The stylish Danielle (@danielleadams)
-The suave Jason (@jasonamatney) 
-The sleek Jake (@huhnytunes)
-The splendid Simon (@simonedice3)
+*The stylish Danielle (@danielleadams)
+*The suave Jason (@jasonamatney) 
+*The sleek Jake (@huhnytunes)
+*The splendid Simon (@simonedice3)
