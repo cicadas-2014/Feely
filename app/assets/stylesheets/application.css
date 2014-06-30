@@ -157,6 +157,7 @@ a:active {
   margin: 32px 4%;
   padding: 12px;
   text-align: center;
+  vertical-align: center;
 }
 
 .story-form {
