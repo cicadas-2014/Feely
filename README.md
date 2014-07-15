@@ -40,9 +40,9 @@ Feely.
 
 ## Contributors
 
+* The sleek Jake ([github](https://github.com/huhnytunes) | [twitter](https://twitter.com/huhnytunes)) 
 * The stylish Danielle (@danielleadams)
 * The suave Jason (@jasonamatney) 
-* The sleek Jake (@huhnytunes)
 * The splendid Simon (@simonedice3)
 
 ## Heroku Link
